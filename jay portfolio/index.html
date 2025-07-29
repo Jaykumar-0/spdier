@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jay Kumar | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    body.dark-mode {
+      background-color: #111;
+      color: #eee;
+    }
+    .toggle-mode {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 999;
+      background: #333;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button id="modeToggle" class="toggle-mode">🌙 Dark Mode</button>
+
+  <header>
+    <div class="container">
+      <h1>Hi, I'm <span>Jay Kumar</span></h1>
+      <h2><span class="typing"></span></h2>
+      <p>Web Designer | Youtuber | Creative Developer</p>
+      <a href="jay_cv.pdf" download class="btn">Download CV</a>
+    </div>
+  </header>
+
+  <section id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>I’m a passionate web designer who loves creating beautiful, responsive websites and sharing tutorials on YouTube. I specialize in clean design and smooth UI experiences.</p>
+  </section>
+
+  <section id="skills" data-aos="fade-up">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>React.js</li>
+      <li>Node.js</li>
+      <li>UI/UX Design</li>
+    </ul>
+  </section>
+
+  <section id="projects" data-aos="fade-up">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>My personal responsive portfolio website.</p>
+      </div>
+      <div class="project-card">
+        <h3>YouTube Channel Page</h3>
+        <p>Landing page to promote and organize YouTube content.</p>
+      </div>
+      <div class="project-card">
+        <h3>Design UI Kit</h3>
+        <p>A frontend UI kit with modern design components.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" data-aos="fade-up">
+    <h2>Testimonials</h2>
+    <blockquote>"Jay is a creative professional. His designs are clean and modern!" – Client A</blockquote>
+    <blockquote>"I loved working with Jay on my website. Highly recommended!" – Client B</blockquote>
+  </section>
+
+  <section id="contact" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/xwkdpgwk" method="POST">
+      <input type="text" name="name" placeholder="Your name" required><br>
+      <input type="email" name="email" placeholder="Your email" required><br>
+      <textarea name="message" placeholder="Your message" required></textarea><br>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© Jay Kumar 2025 | Connect: 
+      <a href="#">GitHub</a> | 
+      <a href="#">LinkedIn</a> | 
+      <a href="#">Instagram</a>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    var typed = new Typed(".typing", {
+      strings: ["Web Designer", "YouTuber", "Frontend Developer"],
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop: true
+    });
+    document.getElementById('modeToggle').addEventListener('click', function () {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+</html>
